@@ -2,12 +2,14 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class Klinik {
-    private List<Ruangan> daftarruangan;
+    private List<Ruangan> daftarRuangan;
     private List<Dokter> daftarDokter;
-    public Klinik(String Ruangan, List<Dokter> dokter) {
-        this.daftarruangan = new ArrayList<>();
-        this.daftarruangan.add(new Ruangan(Ruangan));
+
+    public Klinik(List<Dokter> dokter) {
         this.daftarDokter = dokter;
 
+        this.daftarRuangan = new ArrayList<>();
+        this.daftarRuangan.add(new Ruangan("Ruang 101"));
+        this.daftarRuangan.add(new Ruangan("Ruang 102"));
     }
 }
